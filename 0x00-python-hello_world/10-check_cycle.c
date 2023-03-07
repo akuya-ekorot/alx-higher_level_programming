@@ -24,7 +24,6 @@ int check_cycle(listint_t *list)
 			{
 				if (temp == current)
 					return (1);
-
 				j++;
 				temp = temp->next;
 			}
