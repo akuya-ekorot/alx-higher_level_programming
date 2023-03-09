@@ -6,7 +6,7 @@ if __name__ == "__main__":
     print("{0} arguement".format(length), end="")
 
     if length == 0:
-        print(".")
+        print("s.")
     else:
         if length == 1:
             print(":")
