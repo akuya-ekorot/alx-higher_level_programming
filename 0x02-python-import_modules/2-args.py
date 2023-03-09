@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    length = len(sys.argv) - 1
-    print("{0} arguement".format(length), end="")
+    length = len(argv) - 1
+
+    print("{0} argument".format(length), end="")
 
     if length == 0:
         print("s.")
@@ -14,4 +15,4 @@ if __name__ == "__main__":
             print("s:")
 
         for i in range(length):
-            print("{0}: {1}".format(i + 1, sys.argv[i + 1]))
+            print("{0}: {1}".format(i + 1, argv[i + 1]))
