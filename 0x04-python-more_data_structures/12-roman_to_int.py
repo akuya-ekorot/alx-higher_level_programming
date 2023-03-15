@@ -4,6 +4,9 @@ def roman_to_int(roman_string):
     sum = 0
     skip = False
 
+    if roman_string is None or not isinstance(roman_string, str):
+        return 0
+
     for i in range(len(roman_string)):
         if skip:
             skip = False
