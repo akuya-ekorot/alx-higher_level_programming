@@ -10,7 +10,7 @@ print("--")
 
 
 my_rectangle_2 = Rectangle(2, 1)
-print(my_rectangle_2)
+print(str(my_rectangle_2))
 print("--")
 my_rectangle_2.print_symbol = "C"
 print(my_rectangle_2)
