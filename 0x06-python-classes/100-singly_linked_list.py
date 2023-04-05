@@ -39,12 +39,14 @@ class Node:
     """Node class for a node in a singly-linked list"""
 
     def __init__(self, data, next_node=None):
-        self.__next_node = next_node
+        if not isinstance(next_node, Node):
+            raise TypeError("next_node must be a Node object")
 
-        if type(data) is not int:
+        if not isinstance(data, int):
             raise TypeError("data must be an integer")
-        else:
-            self.__data = data
+
+        self.__next_node = next_node
+        self.__data = data
 
     @property
     def data(self):
