@@ -22,7 +22,10 @@ class Rectangle:
         self.__width = width
 
     def __str__(self):
-        return ((("#" * self.__width) + "\n") * (self.__height - 1) + ("#" * self.__width))
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return ((("#" * self.__width) + "\n") * (self.__height - 1) +
+                ("#" * self.__width))
 
     @property
     def height(self):
