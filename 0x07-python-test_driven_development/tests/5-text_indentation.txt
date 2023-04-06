@@ -1,0 +1,16 @@
+Import function
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Check if the arguement text is a string
+>>> text_indentation(4)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+Check if there are no spaces at the beginning or at the end of printed lines
+>>> text_indentation("""Hello there? My name is Mr. Akuya Ekorot""")
+Hello there
+<BLANKLINE>
+My name is Mr
+<BLANKLINE>
+Akuya Ekorot
