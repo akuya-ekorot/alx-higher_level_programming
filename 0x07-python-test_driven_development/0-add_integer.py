@@ -5,6 +5,9 @@
 def add_integer(a, b=98):
     """Returns the sum of a and b."""
 
+    if not a:
+        raise ValueError("missing one required positional arguement: 'a'")
+
     if not (isinstance(a, int) or isinstance(a, float)):
         raise TypeError("a must be an integer")
 

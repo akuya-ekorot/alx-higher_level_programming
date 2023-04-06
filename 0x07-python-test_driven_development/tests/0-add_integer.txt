@@ -23,3 +23,9 @@ TypeError: a must be an integer
 Test if default value on function works
 >>> add_integer(2)
 100
+
+Test if no arguements are passed
+>>> add_integer()
+Traceback (most recent call last):
+	...
+TypeError: add_integer() missing 1 required positional argument: 'a'
