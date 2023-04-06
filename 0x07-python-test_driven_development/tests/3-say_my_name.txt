@@ -1,0 +1,22 @@
+Import function for tests
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Raise exception if first name is not a string
+>>> say_my_name(12, "Bob")
+Traceback (most recent call last):
+	...
+TypeError: first_name must be a string
+
+Raise exception if last name is not a string
+>>> say_my_name("Bob", 12)
+Traceback (most recent call last):
+	...
+TypeError: last_name must be a string
+
+Print two names
+>>> say_my_name("Akuya", "Ekorot")
+My name is Akuya Ekorot
+
+Print one names
+>>> say_my_name("Akuya")
+My name is Akuya 
