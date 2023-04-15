@@ -31,3 +31,58 @@
 ...		print("[{}]: {}".format(e.__class__.__name__, e))
 [ValueError]: zero must be greater than 0
 
+[test-08]: except type error from tuple
+>>> try:
+...		bg.integer_validator("tuple", (1, 2))
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: tuple must be an integer
+
+[test-09]: except type error from dictionary
+>>> try:
+...		bg.integer_validator("dictionary", {1: 2})
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: dictionary must be an integer
+
+[test-10]: except type error from None
+>>> try:
+...		bg.integer_validator("None", None)
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: None must be an integer
+
+[test-11]: except type error from Bool
+>>> try:
+...		bg.integer_validator("Bool", False)
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: Bool must be an integer
+
+[test-12]: except type error from list
+>>> try:
+...		bg.integer_validator("list", [3, 4, 5])
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: list must be an integer
+
+[test-13]: except type error from list
+>>> try:
+...		bg.integer_validator("list", [3, 4, 5])
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: list must be an integer
+
+[test-14]: except type error due to number of positional arguments passed
+>>> try:
+...		bg.integer_validator("argument")
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: integer_validator() missing 1 required positional argument: 'value'
+
+[test-15]: except type error due to number of positional arguments passed
+>>> try:
+...		bg.integer_validator("argument", 4, "yeah")
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: integer_validator() takes 3 positional arguments but 4 were given
