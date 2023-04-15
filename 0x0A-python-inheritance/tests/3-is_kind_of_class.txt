@@ -1,0 +1,26 @@
+test-01: import module
+>>> module = __import__('3-is_kind_of_class')
+
+test-02: module is documented
+>>> print(module.__doc__)
+contains the function is_kind_of_class
+
+test-03: assign function to variable
+>>> is_kind_of_class = module.is_kind_of_class
+
+test-04: function is documented
+>>> print(is_kind_of_class.__doc__)
+returns True if object is an instance of, or is inherited from,
+ the specified class
+
+test-05: identifies exact class
+>>> print(is_kind_of_class(1, int))
+True
+
+test-06: handles parent class
+>>> print(is_kind_of_class(True, int))
+True
+
+test-07: handles parent class
+>>> print(is_kind_of_class(True, object))
+True
