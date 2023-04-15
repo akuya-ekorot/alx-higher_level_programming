@@ -86,3 +86,10 @@
 ... except Exception as e:
 ...		print("[{}]: {}".format(e.__class__.__name__, e))
 [TypeError]: integer_validator() takes 3 positional arguments but 4 were given
+
+[test-16]: area not implemented exception
+>>> try:
+...		bg.area()
+... except Exception as e:
+...		print(e)
+area() is not implemented
