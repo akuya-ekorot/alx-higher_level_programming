@@ -93,3 +93,10 @@
 ... except Exception as e:
 ...		print(e)
 area() is not implemented
+
+[test-17]: except type error from set
+>>> try:
+...		bg.integer_validator("set", {3, 4, 5})
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: set must be an integer
