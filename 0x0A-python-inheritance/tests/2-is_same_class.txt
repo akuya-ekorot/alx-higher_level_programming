@@ -1,0 +1,25 @@
+test-01: import module
+>>> module = __import__('2-is_same_class')
+
+test-02: module is documented
+>>> print(module.__doc__)
+contains the function is_same_class
+
+test-03: assign function to variable
+>>> is_same_class = module.is_same_class
+
+test-04: function is documented
+>>> print(is_same_class.__doc__)
+returns True if object is exactly an instance of the specified class
+
+test-05: identifies exact class
+>>> print(is_same_class(1, int))
+True
+
+test-06: handles parent class
+>>> print(is_same_class(True, int))
+False
+
+test-07: handles parent class
+>>> print(is_same_class(True, object))
+False
