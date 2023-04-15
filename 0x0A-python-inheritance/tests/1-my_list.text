@@ -1,0 +1,47 @@
+test-01: import module
+>>> module = __import__('1-my_list')
+
+test-02: module is documented
+>>> print(module.__doc__)
+contains the subclass MyList that inherits from list and quicksort
+
+test-03: assign class to variable
+>>> MyList = module.MyList
+
+test-04: class is documented
+>>> print(MyList.__doc__)
+inherits from list. has additional methods and attributes.
+
+test-05: method is documented
+>>> print(MyList.print_sorted.__doc__)
+prints the list sorted in ascending order
+
+test-06: create instance of class
+>>> my_list = MyList([1, 4, 2, 3, 5])
+
+test-07: print original list
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+test-08: print sorted list using public instance method
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+test-09: original list not modified
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+test-10: create instance of class
+>>> my_list = MyList([1])
+
+test-11: print original list
+>>> print(my_list)
+[1]
+
+test-12: print sorted list using public instance method
+>>> my_list.print_sorted()
+[1]
+
+test-13: original list not modified
+>>> print(my_list)
+[1]
