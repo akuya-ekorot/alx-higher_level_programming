@@ -1,0 +1,26 @@
+test-01: import module
+>>> module = __import__('4-inherits_from')
+
+test-02: module is documented
+>>> print(module.__doc__)
+contains the function inherits_from
+
+test-03: assign function to variable
+>>> inherits_from = module.inherits_from
+
+test-04: function is documented
+>>> print(inherits_from.__doc__)
+returns True if obj is an instance of a class that inherited (directly
+ or indirecty) from the specified class; otherwise false
+
+test-05: handles exact class
+>>> print(inherits_from(True, bool))
+False
+
+test-06: handles inherited class
+>>> print(inherits_from(True, int))
+True
+
+test-07: handles inherited class
+>>> print(inherits_from(True, object))
+True
