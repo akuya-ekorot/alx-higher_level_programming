@@ -1,0 +1,33 @@
+[test-01]: import class
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+[test-02]: create instance of class
+>>> bg = BaseGeometry()
+
+[test-03]: validate integers
+>>> bg.integer_validator("nice", 69)
+
+[test-04]: validate integers
+>>> bg.integer_validator("very nice", 420)
+
+[test-05]: except type error
+>>> try:
+...		bg.integer_validator("oh", "hello")
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[TypeError]: oh must be an integer
+
+[test-06]: except value error from negative number
+>>> try:
+...		bg.integer_validator("negative", -8)
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[ValueError]: negative must be greater than 0
+
+[test-07]: except value error from zero
+>>> try:
+...		bg.integer_validator("zero", 0)
+... except Exception as e:
+...		print("[{}]: {}".format(e.__class__.__name__, e))
+[ValueError]: zero must be greater than 0
+
