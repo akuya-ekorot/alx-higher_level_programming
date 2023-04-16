@@ -8,4 +8,4 @@ def add_attribute(obj, name, value):
                                     name in obj.__class__.__slots__):
         setattr(obj, name, value)
     else:
-        raise TypeError("cant add new attribute")
+        raise TypeError("can't add new attribute")
