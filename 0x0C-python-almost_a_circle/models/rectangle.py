@@ -13,6 +13,14 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        return "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                self.id,
+                                                self.x,
+                                                self.y,
+                                                self.width,
+                                                self.height)
+
     def display(self):
         """Prints in stdout the rectangle instance with character #
         """
