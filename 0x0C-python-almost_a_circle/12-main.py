@@ -7,3 +7,9 @@ if __name__ == "__main__":
     r1_dict = r1.to_dictionary()
     print(r1_dict)
     print(type(r1_dict))
+
+    r2 = Rectangle(1, 1)
+    print(r2)
+    r2.update(**r1_dict)
+    print(r2)
+    print(r2 == r1)
