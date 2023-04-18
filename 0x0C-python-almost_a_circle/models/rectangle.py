@@ -21,6 +21,14 @@ class Rectangle(Base):
                                                 self.width,
                                                 self.height)
 
+    def update(self, *args):
+        """Updates the values of the instance
+        """
+        attributes = ["id", "width", "height", "x", "y"]
+
+        for i, arg in enumerate(args):
+            setattr(self, attributes[i], arg)
+
     def display(self):
         """Prints in stdout the rectangle instance with character #
         """
