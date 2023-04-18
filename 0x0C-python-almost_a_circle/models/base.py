@@ -23,11 +23,12 @@ class Base:
         filename = cls.__name__ + ".json"
         dictionaries = []
 
-        for obj in list_objs:
-            dictionaries.append(obj.to_dictionary())
+        if list_objs is not None:
+            for obj in list_objs:
+                dictionaries.append(obj.to_dictionary())
 
         with open(filename, "w", encoding="utf-8") as f:
-            json.dump(dictionaries, f)
+            f.write(cls.to_json_string(dictionaries))
 
     @staticmethod
     def to_json_string(list_dictionaries):
