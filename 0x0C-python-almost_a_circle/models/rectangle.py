@@ -13,6 +13,15 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def display(self):
+        """Prints in stdout the rectangle instance with character #
+        """
+
+        for i in range(self.height):
+            for j in range(self.width):
+                print("#", end="")
+            print()
+
     def area(self):
         """Returns the area of the rectangle
         """
