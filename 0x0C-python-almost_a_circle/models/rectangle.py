@@ -13,6 +13,12 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def area(self):
+        """Returns the area of the rectangle
+        """
+
+        return self.__width * self.__height
+
     @property
     def width(self):
         """Getter for private property __width
