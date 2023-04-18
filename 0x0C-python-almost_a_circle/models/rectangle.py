@@ -21,6 +21,15 @@ class Rectangle(Base):
                                                 self.width,
                                                 self.height)
 
+    def to_dictionary(self):
+        return {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.id,
+            "width": self.width
+        }
+
     def update(self, *args, **kwargs):
         """Updates the values of the instance
         """
