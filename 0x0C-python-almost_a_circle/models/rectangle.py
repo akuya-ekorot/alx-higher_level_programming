@@ -24,9 +24,9 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """Updates the values of the instance
         """
+        attributes = ["id", "width", "height", "x", "y"]
 
         if args:
-            attributes = ["id", "width", "height", "x", "y"]
 
             for i, arg in enumerate(args):
                 setattr(self, attributes[i], arg)
