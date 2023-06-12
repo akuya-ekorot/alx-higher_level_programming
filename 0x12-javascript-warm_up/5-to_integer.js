@@ -6,9 +6,8 @@ try {
   if (number) {
     console.log('My number:', number);
   } else {
-    throw new Error;
+    throw new Error();
   }
-
 } catch (e) {
   console.log('Not a number');
 }
