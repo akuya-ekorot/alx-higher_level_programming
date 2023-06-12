@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "semistandard": "^17.0.0"
+  }
 }
