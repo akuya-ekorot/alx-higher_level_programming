@@ -2,7 +2,7 @@
   "name": "0x12-javascript-warm_up",
   "version": "1.0.0",
   "description": "This directory contains tasks for the Javascript Warm Up project in ALX.",
-  "main": "0-javascript_is_amazing.js",
+  "main": "index.js",
   "scripts": {
     "test": "semistandard --fix"
   },
