@@ -1,6 +1,6 @@
 #!/usr/bin/node
-exports.callMeMoby = function (n, func) {
-  while (n--) {
-    func();
+exports.callMeMoby = function (x, theFunction) {
+  while (x > 0 && x--) {
+    theFunction();
   }
 };
