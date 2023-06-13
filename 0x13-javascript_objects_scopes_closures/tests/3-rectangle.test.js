@@ -16,5 +16,5 @@ test('Prints 5 rows, 10 cols', () => {
   r2.print();
 
   expect(spy).toHaveBeenCalledWith('X'.repeat(10));
-  expect(spy).toHaveBeenCalledTimes(8);
+  expect(spy).toHaveBeenCalledTimes(5);
 })
