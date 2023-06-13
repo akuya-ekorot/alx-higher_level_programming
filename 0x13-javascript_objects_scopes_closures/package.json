@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "semistandard --fix"
+    "test": "jest",
+    "std": "semistandard --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "semistandard": "^17.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
