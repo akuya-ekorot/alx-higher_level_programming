@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Model State Insert
+"""
+Module that changes the name of a State object from the database hbtn_0e_6_usa
 """
 
 import sys
@@ -8,7 +9,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-def insert():
+def change_state():
+    """Change the name of a State object from the database hbtn_0e_6_usa
+    """
     # get command line args
     [username, password, db_name] = sys.argv[1:]
 
@@ -22,17 +25,18 @@ def insert():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # create new record
-    new_state = State(name='Louisiana')
-    session.add(new_state)
-    session.commit()
+    # get state with id 2
+    state = session.query(State).filter(State.id == 2).first()
 
-    # print record id
-    print(new_state.id)
+    # change state name
+    state.name = 'New Mexico'
+
+    # commit changes
+    session.commit()
 
     # close session
     session.close()
 
 
 if __name__ == "__main__":
-    insert()
+    change_state()
