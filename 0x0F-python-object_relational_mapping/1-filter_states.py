@@ -26,6 +26,9 @@ def filter_states(db):
     for state in filtered_states:
         print(state)
 
+    # close cursor
+    cur.close()
+
 
 if __name__ == "__main__":
     # get command line arguments
