@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module to filter states by user input"""
 
 import sys
@@ -6,18 +6,8 @@ import MySQLdb
 
 
 # function to filter by user input
-def filter_states():
+def filter_states(db):
     """Filter states by user input"""
-    # get command line arguments
-    username, password, db_name, filter = sys.argv[1:]
-
-    # create db
-    db = MySQLdb.connect(
-            host='localhost',
-            user=username,
-            passwd=password,
-            db=db_name)
-
     # create cursor
     cur = db.cursor()
 
@@ -39,8 +29,18 @@ def filter_states():
 
     # close the cursor
     cur.close()
-    db.close()
 
 
 if __name__ == '__main__':
-    filter_states()
+    # get command line arguments
+    username, password, db_name, filter = sys.argv[1:]
+
+    # create db
+    db = MySQLdb.connect(
+            host='localhost',
+            user=username,
+            passwd=password,
+            db=db_name)
+
+    filter_states(db)
+    db.close()
