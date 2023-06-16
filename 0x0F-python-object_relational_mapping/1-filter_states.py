@@ -14,12 +14,12 @@ def filter_states(db):
     query = """
     SELECT id, name
     FROM states
-    WHERE name LIKE 'N%'
+    WHERE name LIKE %s
     ORDER BY id ASC;
     """
 
     # execute command
-    cur.execute(query)
+    cur.execute(query, ('N%',))
     filtered_states = cur.fetchall()
 
     # print results
