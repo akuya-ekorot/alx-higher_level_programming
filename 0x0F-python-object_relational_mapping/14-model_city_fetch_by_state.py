@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Module that prints all City object from the database hbtn_0e_14_usa
 """
 from sys import argv
