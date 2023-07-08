@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Python script that takes 2 arguments that lists 10 commits (from the most
 recent to oldest) of the repository and user passed in as argument using the
 Github API"""
