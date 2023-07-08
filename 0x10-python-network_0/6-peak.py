@@ -22,12 +22,12 @@ def find_peak(list_of_integers):
         return max(li)
 
     # If the list has more than two elements
-    # The peak is the middle element if it is greater than or equal to
-    # its neighbors
+    # The peak is the middle element if it is greater than its neighbors
     # Otherwise, the peak is found recursively in the left or right half
     # of the list depending on whether the left or right neighbor is greater
-    # than the middle element
+    # than or equal the middle element
     middle = len(li) // 2
+
     if li[middle] > li[middle - 1] and li[middle] > li[middle + 1]:
         return li[middle]
 
