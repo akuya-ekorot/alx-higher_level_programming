@@ -16,7 +16,7 @@ request(url, function (error, response, body) {
     for (let i = 0; i < films.length; i++) {
       const characters = films[i].characters;
       for (let j = 0; j < characters.length; j++) {
-        if (characters[j] === wedge) {
+        if (characters[j].includes('18')) {
           count++;
         }
       }
